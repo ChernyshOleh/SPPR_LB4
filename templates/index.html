@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>ML API</title>
+  </head>
+  <body>
+    <div class="login">
+      <h1>
+        Системи підтримки прийняття рішень<br />Лабораторна робота №4<br />Черниш
+        Олег САД-41
+      </h1>
+      <form action="{{ url_for('predict')}}" method="post">
+        <input
+          type="text"
+          name="SepalLength"
+          placeholder="SepalLength"
+          required="required"
+        />
+        <input
+          type="text"
+          name="SepalWidth"
+          placeholder="SepalWidth"
+          required="required"
+        />
+        <input
+          type="text"
+          name="PetalLength"
+          placeholder="PetalLength"
+          required="required"
+        />
+        <input
+          type="text"
+          name="PetalWidth"
+          placeholder="PetalWidth"
+          required="required"
+        />
+        <button type="submit" class="btn btn-primary btn-block btn-large">
+          Predict
+        </button>
+      </form>
+      <br />
+      <br />
+      {{ prediction_text }}
+    </div>
+  </body>
+</html>
